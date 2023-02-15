@@ -29,7 +29,7 @@ public class Piramide {
     }
     
     public float calcularVolume(){
-        return (base * altura) /3;
+        return (float)(1.0/3.0 * (base * altura));
     }
     
 }
