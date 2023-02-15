@@ -178,8 +178,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         }else {
             obj.setRaio(Float.parseFloat(jTextField_Raio.getText()));
             jTextArea_Saida.setText(
-                    "Area Total : " + obj.CalcularArea()
-                    + "\nVolume : " + obj.CalcularVolume()
+                    "Area Total : " + obj.calcularArea()
+                    + "\nVolume : " + obj.calcularVolume()
                     );
             }
         for (int i = 0; i < 100; i++) {

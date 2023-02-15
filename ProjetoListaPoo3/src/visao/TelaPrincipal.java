@@ -181,26 +181,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Retangulo obj = new Retangulo();
         JFrame jframe = new JFrame();
-        boolean menorZero = true;
-        if ( Float.parseFloat(jTextField_Comprimento.getText()) < 0 ) {
-            JOptionPane.showMessageDialog(jframe, "Comprimento nao pode ser menor que 0 !!");
-            menorZero = false;
+
+        if ( Float.parseFloat(jTextField_Comprimento.getText()) < 0 || Float.parseFloat(jTextField_Largura.getText()) < 0) {
+            JOptionPane.showMessageDialog(jframe, "Comprimento ou largura nao pode ser menor que 0 !!");
         }else {
             obj.setComprimento(Float.parseFloat(jTextField_Comprimento.getText()));
-
-        }
-        if ( Float.parseFloat(jTextField_Largura.getText()) < 0) {
-            JOptionPane.showMessageDialog(jframe, "Largura nao pode ser menor que 0 !!");
-             menorZero = false;
-        }else {
             obj.setLargura(Float.parseFloat(jTextField_Largura.getText()));
-
-        }
-        if ( menorZero == true ){
-                jTextArea_Saida.setText(
+            jTextArea_Saida.setText(
                         "Area do Triangulo: " + String.format("%.2f", obj.calcularArea())
                        + "\nPerimetro: " + String.format("%.2f", obj.calcularPerimetro())
-        );
+            );
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed

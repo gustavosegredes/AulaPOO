@@ -19,10 +19,10 @@ public class Esfera {
         this.raio = raio;
     }
             
-    public float CalcularArea() {
+    public float calcularArea() {
         return (float) (4*3.1415* (raio * raio));
     }
-    public float CalcularVolume() {
+    public float calcularVolume() {
         return (float) ((4/3)* 3.1415 * ( raio * raio * raio));
     }
 }
