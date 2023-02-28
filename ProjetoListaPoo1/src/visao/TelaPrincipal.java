@@ -124,6 +124,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jTextArea_Saida.setColumns(20);
         jTextArea_Saida.setRows(5);
         jScrollPane1.setViewportView(jTextArea_Saida);
+        jTextArea_Saida.setEditable(false);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);

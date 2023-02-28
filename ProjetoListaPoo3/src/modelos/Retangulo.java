@@ -18,7 +18,8 @@ public class Retangulo {
         return comprimento;
     }
 
-    public void setComprimento(float comprimento) {
+    public void setComprimento(float comprimento) throws Exception{
+        if ( comprimento <= 0 ) throw new Exception("Comprimento nao pode ser <= 0 !!!!");
         this.comprimento = comprimento;
     }
 
@@ -26,7 +27,8 @@ public class Retangulo {
         return largura;
     }
 
-    public void setLargura(float largura) {
+    public void setLargura(float largura) throws Exception{
+        if ( largura <= 0 ) throw new Exception("Largura nao pode ser <= 0 !!!");
         this.largura = largura;
     }
     
