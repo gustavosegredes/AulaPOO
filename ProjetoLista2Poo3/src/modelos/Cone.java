@@ -9,9 +9,10 @@ package modelos;
  * @author Gustavo Camargo
  */
 public class Cone {
+    //Atriburos
     private float raio = 0;
     private float altura = 0;
-
+    //Getts e sets
     public float getRaio() {
         return raio;
     }
@@ -29,7 +30,7 @@ public class Cone {
         if ( altura < 0 ) throw new Exception("Altura nao pode ser negativo!!"); 
         this.altura = altura;
     }
-    
+    //Metodos
     public float calcGeratriz(){
         return (float) Math.sqrt((Math.pow(altura, 2)+ (Math.pow(raio, 2))));
     }

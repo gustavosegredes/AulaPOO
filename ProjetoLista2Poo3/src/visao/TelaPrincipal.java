@@ -141,6 +141,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jTextArea_Saida.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jTextArea_Saida.setRows(5);
         jScrollPane1.setViewportView(jTextArea_Saida);
+        jTextArea_Saida.setEditable(false);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);

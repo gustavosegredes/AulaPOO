@@ -11,8 +11,16 @@ package modelos;
 public class JogoDaVelha {
     
     public int[][] mat = new int[3][3];
+
     
- 
+    public int[][] getMat() {
+        return mat;
+    }
+
+    public void setMat(int[][] mat) {
+        this.mat = mat;
+    }
+    
     public int[][] criaMatriz() {
         for (int i = 0; i < mat.length; i++) {
             for (int j = 0; j < mat.length; j++) {
@@ -46,15 +54,14 @@ public class JogoDaVelha {
         }
         System.out.println(linha);
         if(linha.contains("111") || linha.contains("222")){
-            System.out.println(linha);
+            //System.out.println(linha);
             return true;
         }else {
-            
             String coluna = "";
             for(int x = 0; x < mat.length; x++){
                 coluna = coluna + getValor(x, j);
             }
-            System.out.println(coluna);
+            //System.out.println(coluna);
             return coluna.contains("111") || coluna.contains("222");
         }
     }
