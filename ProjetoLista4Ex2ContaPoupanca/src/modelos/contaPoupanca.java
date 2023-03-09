@@ -17,8 +17,6 @@ public class contaPoupanca {
     private int agencia = 0;
     private float saldo = 0;
 
-
-    
     public contaPoupanca(String nomeCliente,int numeroConta, int agencia, float saldo )throws Exception{
         this.nomeCliente = nomeCliente;
         if ( numeroConta <= 0) throw new Exception("Valor da conta nao pode ser menor que 0!");
@@ -32,6 +30,7 @@ public class contaPoupanca {
     }
     public void sacarDinheiro(float valorSaque)throws Exception{
         if ( valorSaque > saldo) throw new Exception("Seu saldo e menor que valor desejado");
+        if ( valorSaque <= 0 ) throw  new Exception("Saque não pode ser menor que 0!");
         saldo -= valorSaque;
     }
     public void  depositarDinheiro(float valorDeposito) throws Exception{
