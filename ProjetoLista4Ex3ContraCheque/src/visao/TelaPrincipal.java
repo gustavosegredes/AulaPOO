@@ -114,6 +114,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
 
         jButton_Limpar.setText("Limpar");
+        jButton_Limpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_LimparActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -273,13 +278,26 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_EnviarActionPerformed
 
     private void jTextArea_SaidaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jTextArea_SaidaAncestorAdded
+
+    }//GEN-LAST:event_jTextArea_SaidaAncestorAdded
+
+    private void jButton_LimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LimparActionPerformed
+            //Limpando text field
+            jTextField_Matricula.setText("");
+            jTextField_NomeFuncionario.setText("");
+            jTextField_QuantidadeDependentes.setText("");
+            jTextField_Producao.setText("");
+            jTextField_SalarioBase.setText("");
+            jTextArea_Saida.setText("");
+            
+            //habilitando textfield 
             jTextField_Matricula.setEnabled(true);
             jTextField_NomeFuncionario.setEnabled(true);
             jTextField_QuantidadeDependentes.setEnabled(true);
             jTextField_Producao.setEnabled(true);
             jTextField_SalarioBase.setEnabled(true);
             jTextArea_Saida.setText("");
-    }//GEN-LAST:event_jTextArea_SaidaAncestorAdded
+    }//GEN-LAST:event_jButton_LimparActionPerformed
 
     /**
      * @param args the command line arguments
